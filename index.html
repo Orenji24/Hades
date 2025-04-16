@@ -3,86 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>grroot</title>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffff00;
-            margin: 0;
-            padding: 0;
-
-            }
-
-        header {
-            background-color: #a5ccff;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        .header-title {
-      font-size: 1.5em;
-    }
-
-    .header-buttons button {
-      background-color: #555;
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      margin-left: 10px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    .header-buttons button:hover {
-      background-color: #777;
-    }
-    
-    .link-button:hover {
-      background-color: #0056b3;
-    }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Groot | Mental Wellness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="auth-modal" id="authModal">
+        <div class="auth-content">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to Groot</h2>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+            <div class="tab-content active" id="login">
+                <form id="loginForm">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="social-auth">
+                    <p>Or continue with:</p>
+                    <div class="social-icons">
+                        <button class="google-btn"><i class="fab fa-google"></i></button>
+                        <button class="apple-btn"><i class="fab fa-apple"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="signup">
+                <form id="signupForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <header>
-         <div class="header-title">grroot</div>
-    <div class="header-buttons">
-      <button onclick="alert('Home clicked')">advice</button>
-      <button onclick="alert('About clicked')">vent</button>
-      <button onclick="alert('Contact clicked')">idkabc</button>
-      <button class="link-button" onclick="window.location.href='https://www.wikipedia.org'">wiki</button>
-
-    </div>
+        <div class="container">
+            <div class="logo">
+                <img src="images/groot-icon.png" alt="Groot Logo">
+                <h1>Groot</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#journal">Journal</a></li>
+                    <li><a href="#therapists">Therapists</a></li>
+                    <li><a href="#trackers">Trackers</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+            <div class="auth-btns">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn" class="primary">Sign Up</button>
+            </div>
+        </div>
     </header>
 
     <main>
-        
-        <h2></h2>
-        <p>This is a simple static website. You can edit this file to add more content!</p>
-        <p>Enjoy browsing!</p>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h2>Nurture Your Mental Wellbeing</h2>
+                    <p>Groot helps you grow through journaling, tracking, and connecting with professional support.</p>
+                    <button class="primary">Start Your Journey</button>
+                </div>
+                <div class="hero-image">
+                    <img src="images/leaves-bg.jpg" alt="Peaceful nature scene">
+                </div>
+            </div>
+        </section>
+
+        <!-- Other sections would go here -->
     </main>
 
-    <footer>
-        <p>&copy; 2025 Hades</p>
-    </footer>
-
+    <script src="js/app.js"></script>
 </body>
 </html>
