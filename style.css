@@ -248,3 +248,198 @@ form button {
         display: none;
     }
 }
+/* Journal Section */
+.journal-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.streak-counter {
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+.streak-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.streak-label {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.journal-entry {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.mood-selector {
+    margin-bottom: 20px;
+}
+
+.mood-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.mood-option {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 0 10px;
+}
+
+.mood-option:hover {
+    transform: scale(1.2);
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.previous-entries h3 {
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.entries-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.entry-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary);
+}
+
+.entry-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.entry-mood {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.entry-content {
+    color: var(--dark);
+    line-height: 1.5;
+}
+/* Therapists Section */
+.therapists-section {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.search-filters {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.filter {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.filter select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-btn {
+    align-self: flex-end;
+    padding: 10px 25px;
+}
+
+.therapists-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.therapist-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.therapist-card:hover {
+    transform: translateY(-5px);
+}
+
+.therapist-image {
+    height: 200px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.therapist-info {
+    padding: 20px;
+}
+
+.therapist-name {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--secondary);
+}
+
+.therapist-specialty {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.therapist-bio {
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.therapist-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.book-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+}
