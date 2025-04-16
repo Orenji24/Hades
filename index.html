@@ -3,424 +3,700 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groot | Mental Wellness</title>
+    <title>Groot - Mental Health Wellness</title>
     <style>
         :root {
-    --primary: #5C9EAD;
-    --primary-light: #77B6C2;
-    --secondary: #326273;
-    --accent: #5C9EAD;
-    --light: #F0F7F4;
-    --dark: #3A506B;
-    --success: #4CAF50;
-    --warning: #FFC107;
-    --danger: #F44336;
-}
-
-* {
-    margin: 2;
-    padding: 4;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Nunito', sans-serif;
-    background-color: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Styles */
-header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.logo h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: var(--secondary);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover, nav a.active {
-    color: var(--primary);
-}
-
-.auth-btns {
-    display: flex;
-    gap: 15px;
-}
-
-button {
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-button.primary {
-    background-color: var(--primary);
-    color: white;
-}
-
-button.primary:hover {
-    background-color: var(--secondary);
-}
-
-/* Hero Section */
-.hero {
-    padding: 150px 0 80px;
-    background: linear-gradient(135deg, #f0f7f4 0%, #d4e8e1 100%);
-}
-
-.hero .container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--secondary);
-}
-
-.hero-text p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: var(--dark);
-}
-
-.hero-image {
-    flex: 1;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* Auth Modal */
-.auth-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-}
-
-.auth-content {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.auth-tabs {
-    display: flex;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.tab-btn {
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    border-bottom: 3px solid transparent;
-    cursor: pointer;
-}
-
-.tab-btn.active {
-    border-bottom-color: var(--primary);
-    color: var(--primary);
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-form button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-}
-
-.social-auth {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-icons button {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    background-color: #f5f5f5;
-    color: var(--dark);
-}
-
-/* Add responsive design */
-@media (max-width: 768px) {
-    .hero .container {
-        flex-direction: column;
-    }
-    
-    nav ul {
-        display: none;
-    }
-}
+            --primary: #4a7c59;
+            --secondary: #f8f9fa;
+            --accent: #d8b4a0;
+            --text: #333;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary);
+            color: var(--text);
+            background-image: url('leaf-pattern.png');
+            background-blend-mode: overlay;
+            background-size: 30%;
+            background-attachment: fixed;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 0;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .auth-buttons button {
+            margin-left: 10px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .login-btn {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .signup-btn {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        .main-content {
+            display: none;
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            min-height: 60vh;
+        }
+        
+        .active-content {
+            display: block;
+        }
+        
+        .welcome-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        .welcome-section h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .welcome-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        /* Journal Styles */
+        .journal-entry {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        .streak-counter {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Therapist Cards */
+        .therapist-card {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        .therapist-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        /* Tracker Styles */
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .tracker-card {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        /* Chatroom Styles */
+        .chat-container {
+            display: flex;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        
+        .chat-sidebar {
+            width: 30%;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        
+        .chat-main {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+        
+        .chat-input {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+        
+        /* Problem Solver */
+        .problem-solver {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        .solution-card {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="auth-modal" id="authModal">
-        <div class="auth-content">
-            <span class="close-btn">&times;</span>
-            <h2>Welcome to Groot</h2>
-            <div class="auth-tabs">
-                <button class="tab-btn active" data-tab="login">Login</button>
-                <button class="tab-btn" data-tab="signup">Sign Up</button>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Groot</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link" data-target="home">Home</a>
+                    <a href="#" class="nav-link" data-target="journal">Journal</a>
+                    <a href="#" class="nav-link" data-target="therapists">Therapists</a>
+                    <a href="#" class="nav-link" data-target="trackers">Trackers</a>
+                    <a href="#" class="nav-link" data-target="resources">Resources</a>
+                    <a href="#" class="nav-link" data-target="chat">Community</a>
+                    <a href="#" class="nav-link" data-target="solver">Problem Solver</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="login-btn">Login</button>
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Home Content -->
+        <div class="main-content active-content" id="home-content">
+            <div class="welcome-section">
+                <h1>Welcome to Groot</h1>
+                <p>Your personal mental health and wellness companion. Grow with us on your journey to better mental health.</p>
+                <img src="mental-health-illustration.png" alt="Mental Health Illustration" style="max-width: 100%; height: auto;">
             </div>
-            <div class="tab-content active" id="login">
-                <form id="loginForm">
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <div class="social-auth">
-                    <p>Or continue with:</p>
-                    <div class="social-icons">
-                        <button class="google-btn"><i class="fab fa-google"></i></button>
-                        <button class="apple-btn"><i class="fab fa-apple"></i></button>
+            
+            <div class="feature-cards">
+                <div class="feature-card" data-target="journal">
+                    <i class="fas fa-book"></i>
+                    <h3>Daily Journal</h3>
+                    <p>Maintain a private journal and build streaks for consistent self-reflection.</p>
+                </div>
+                <div class="feature-card" data-target="therapists">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Find Therapists</h3>
+                    <p>Connect with licensed mental health professionals in your area.</p>
+                </div>
+                <div class="feature-card" data-target="trackers">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Health Trackers</h3>
+                    <p>Monitor your mood, sleep, fitness, and nutrition all in one place.</p>
+                </div>
+                <div class="feature-card" data-target="resources">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Resources</h3>
+                    <p>Access curated mental health resources tailored to your needs.</p>
+                </div>
+                <div class="feature-card" data-target="chat">
+                    <i class="fas fa-comments"></i>
+                    <h3>Community</h3>
+                    <p>Connect with others who share similar experiences in a safe space.</p>
+                </div>
+                <div class="feature-card" data-target="solver">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Problem Solver</h3>
+                    <p>Identify causes and solutions for the challenges you're facing.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Journal Content -->
+        <div class="main-content" id="journal-content">
+            <h2><i class="fas fa-book"></i> Daily Journal</h2>
+            <div class="streak-counter">
+                <span>Current Streak: </span>
+                <strong>5 days</strong>
+                <i class="fas fa-fire" style="color: #ff6b35;"></i>
+            </div>
+            
+            <div class="journal-form">
+                <textarea placeholder="How are you feeling today?" rows="5" style="width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #ddd;"></textarea>
+                <div style="margin-top: 15px; display: flex; justify-content: space-between;">
+                    <div>
+                        <label>Mood:</label>
+                        <select style="padding: 8px; border-radius: 5px;">
+                            <option>😊 Happy</option>
+                            <option>😐 Neutral</option>
+                            <option>😞 Sad</option>
+                            <option>😡 Angry</option>
+                            <option>😨 Anxious</option>
+                        </select>
+                    </div>
+                    <button style="padding: 10px 25px; background-color: var(--primary); color: white; border: none; border-radius: 20px; cursor: pointer;">Save Entry</button>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 40px;">Past Entries</h3>
+            <div class="journal-entries">
+                <div class="journal-entry">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <strong>June 12, 2023</strong>
+                        <span>😊 Happy</span>
+                    </div>
+                    <p>Today was a good day. I went for a walk in the park and it really helped clear my mind. I realized that spending time in nature makes me feel more at peace.</p>
+                </div>
+                <div class="journal-entry">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <strong>June 11, 2023</strong>
+                        <span>😐 Neutral</span>
+                    </div>
+                    <p>Felt a bit overwhelmed with work today, but I managed to complete all my tasks. Need to work on not being so hard on myself.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Therapists Content -->
+        <div class="main-content" id="therapists-content">
+            <h2><i class="fas fa-user-md"></i> Find Therapists Near You</h2>
+            <div style="margin-bottom: 20px;">
+                <input type="text" placeholder="Search by specialty or location" style="padding: 10px 15px; width: 300px; border-radius: 20px; border: 1px solid #ddd;">
+                <button style="padding: 10px 20px; background-color: var(--primary); color: white; border: none; border-radius: 20px; margin-left: 10px; cursor: pointer;">Search</button>
+            </div>
+            
+            <div class="therapist-card">
+                <img src="therapist1.jpg" alt="Dr. Sarah Johnson" class="therapist-photo">
+                <div>
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p><strong>Specialty:</strong> Anxiety, Depression</p>
+                    <p><strong>Location:</strong> 15km from you</p>
+                    <p><strong>Availability:</strong> Mon, Wed, Fri (10am - 4pm)</p>
+                    <p><strong>Contact:</strong> (555) 123-4567</p>
+                    <button style="padding: 8px 15px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 10px; cursor: pointer;">Book Appointment</button>
+                </div>
+            </div>
+            
+            <div class="therapist-card">
+                <img src="therapist2.jpg" alt="Michael Chen, LCSW" class="therapist-photo">
+                <div>
+                    <h3>Michael Chen, LCSW</h3>
+                    <p><strong>Specialty:</strong> Relationship Issues, Trauma</p>
+                    <p><strong>Location:</strong> 8km from you</p>
+                    <p><strong>Availability:</strong> Tue, Thu (9am - 6pm), Sat (10am - 2pm)</p>
+                    <p><strong>Contact:</strong> (555) 987-6543</p>
+                    <button style="padding: 8px 15px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 10px; cursor: pointer;">Book Appointment</button>
+                </div>
+            </div>
+            
+            <div class="therapist-card">
+                <img src="therapist3.jpg" alt="Dr. Amina Patel" class="therapist-photo">
+                <div>
+                    <h3>Dr. Amina Patel</h3>
+                    <p><strong>Specialty:</strong> Child Psychology, Family Therapy</p>
+                    <p><strong>Location:</strong> 12km from you</p>
+                    <p><strong>Availability:</strong> Mon-Fri (8am - 5pm)</p>
+                    <p><strong>Contact:</strong> (555) 456-7890</p>
+                    <button style="padding: 8px 15px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 10px; cursor: pointer;">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trackers Content -->
+        <div class="main-content" id="trackers-content">
+            <h2><i class="fas fa-chart-line"></i> Health Trackers</h2>
+            
+            <div class="tracker-grid">
+                <div class="tracker-card">
+                    <h3><i class="fas fa-heartbeat"></i> Mood Tracker</h3>
+                    <canvas id="moodChart" width="100%" height="200"></canvas>
+                    <button style="padding: 8px 15px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 15px; cursor: pointer;">Log Today's Mood</button>
+                </div>
+                
+                <div class="tracker-card">
+                    <h3><i class="fas fa-moon"></i> Sleep Tracker</h3>
+                    <canvas id="sleepChart" width="100%" height="200"></canvas>
+                    <div style="margin-top: 15px;">
+                        <label>Last Night's Sleep:</label>
+                        <input type="text" placeholder="7.5 hours" style="padding: 5px; width: 100px; margin-left: 10px;">
+                        <button style="padding: 5px 10px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-left: 10px; cursor: pointer;">Save</button>
+                    </div>
+                </div>
+                
+                <div class="tracker-card">
+                    <h3><i class="fas fa-running"></i> Fitness Tracker</h3>
+                    <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                        <div>
+                            <p>Steps Today:</p>
+                            <h4>5,432</h4>
+                        </div>
+                        <div>
+                            <p>Active Minutes:</p>
+                            <h4>45</h4>
+                        </div>
+                    </div>
+                    <button style="padding: 8px 15px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 15px; cursor: pointer; width: 100%;">Connect Fitness Device</button>
+                </div>
+                
+                <div class="tracker-card">
+                    <h3><i class="fas fa-utensils"></i> Nutrition Tracker</h3>
+                    <div style="margin-top: 15px;">
+                        <p>Today's Meals:</p>
+                        <ul style="padding-left: 20px;">
+                            <li>Breakfast: Oatmeal with fruit</li>
+                            <li>Lunch: Chicken salad</li>
+                            <li>Dinner: Salmon with vegetables</li>
+                        </ul>
+                    </div>
+                    <button style="padding: 8px 15px; background-color: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 15px; cursor: pointer;">Add Food Entry</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resources Content -->
+        <div class="main-content" id="resources-content">
+            <h2><i class="fas fa-hands-helping"></i> Mental Health Resources</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <p>Select the areas you're currently struggling with to get personalized resources:</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+                    <button class="tag-btn">Anxiety</button>
+                    <button class="tag-btn">Depression</button>
+                    <button class="tag-btn">Stress</button>
+                    <button class="tag-btn">Relationships</button>
+                    <button class="tag-btn">Trauma</button>
+                    <button class="tag-btn">Sleep Issues</button>
+                    <button class="tag-btn">Self-Esteem</button>
+                    <button class="tag-btn">Grief</button>
+                </div>
+            </div>
+            
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <h3>Understanding Anxiety</h3>
+                    <p>A comprehensive guide to anxiety disorders, symptoms, and coping strategies.</p>
+                    <a href="#" style="color: var(--primary);">Read Article →</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>Meditation for Stress Relief</h3>
+                    <p>Guided meditation videos to help reduce stress and improve mindfulness.</p>
+                    <a href="#" style="color: var(--primary);">Watch Videos →</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>Crisis Hotlines</h3>
+                    <p>Immediate help is available if you're in crisis. You're not alone.</p>
+                    <a href="#" style="color: var(--primary);">View Contacts →</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3>Cognitive Behavioral Therapy Exercises</h3>
+                    <p>Worksheets and exercises to practice CBT techniques at home.</p>
+                    <a href="#" style="color: var(--primary);">Download PDF →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Content -->
+        <div class="main-content" id="chat-content">
+            <h2><i class="fas fa-comments"></i> Community Chat</h2>
+            <p>Connect with others who share similar experiences in a safe, moderated space.</p>
+            
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <h4 style="padding: 15px; border-bottom: 1px solid #ddd; margin: 0;">Support Groups</h4>
+                    <div style="padding: 10px 15px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                        <strong>Anxiety Support</strong>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">45 active members</p>
+                    </div>
+                    <div style="padding: 10px 15px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                        <strong>Depression Recovery</strong>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">32 active members</p>
+                    </div>
+                    <div style="padding: 10px 15px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                        <strong>Mindfulness Practice</strong>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">28 active members</p>
+                    </div>
+                    <div style="padding: 10px 15px; border-bottom: 1px solid #ddd; cursor: pointer;">
+                        <strong>Parenting Stress</strong>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">19 active members</p>
+                    </div>
+                    <div style="padding: 10px 15px; cursor: pointer;">
+                        <strong>Work-Life Balance</strong>
+                        <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">23 active members</p>
+                    </div>
+                </div>
+                <div class="chat-main">
+                    <div class="chat-messages">
+                        <div style="margin-bottom: 15px;">
+                            <div style="font-weight: bold;">Alex (10:23 AM):</div>
+                            <div style="background-color: #f0f0f0; padding: 8px 12px; border-radius: 10px; display: inline-block; max-width: 70%;">Has anyone tried the breathing exercises from last week's resource? I found them really helpful during my anxiety attacks.</div>
+                        </div>
+                        <div style="margin-bottom: 15px; text-align: right;">
+                            <div style="font-weight: bold;">You (10:25 AM):</div>
+                            <div style="background-color: var(--primary); color: white; padding: 8px 12px; border-radius: 10px; display: inline-block; max-width: 70%;">Yes! The 4-7-8 technique has been a game changer for me.</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="font-weight: bold;">Jamie (10:27 AM):</div>
+                            <div style="background-color: #f0f0f0; padding: 8px 12px; border-radius: 10px; display: inline-block; max-width: 70%;">I haven't tried them yet but after hearing this I definitely will. Thanks for sharing!</div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message..." style="width: 80%; padding: 10px; border-radius: 20px; border: 1px solid #ddd;">
+                        <button style="padding: 10px 20px; background-color: var(--primary); color: white; border: none; border-radius: 20px; margin-left: 10px; cursor: pointer;">Send</button>
                     </div>
                 </div>
             </div>
-            <div class="tab-content" id="signup">
-                <form id="signupForm">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">Create Account</button>
-                </form>
+            
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 10px;">
+                <h4>Community Guidelines</h4>
+                <ul style="padding-left: 20px; font-size: 0.9rem;">
+                    <li>Be kind and respectful to all members</li>
+                    <li>No hate speech or discrimination of any kind</li>
+                    <li>Respect everyone's privacy</li>
+                    <li>This is not a substitute for professional help</li>
+                    <li>If you're in crisis, please contact emergency services</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Problem Solver Content -->
+        <div class="main-content" id="solver-content">
+            <h2><i class="fas fa-lightbulb"></i> Problem Solver</h2>
+            <p>Describe what you're struggling with, and we'll help identify potential causes and solutions.</p>
+            
+            <div class="problem-solver">
+                <textarea placeholder="I've been feeling..." rows="5" style="width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #ddd;"></textarea>
+                <button style="padding: 10px 25px; background-color: var(--primary); color: white; border: none; border-radius: 20px; margin-top: 15px; cursor: pointer;">Analyze</button>
+                
+                <div class="solution-card" style="display: none;">
+                    <h3>Potential Causes</h3>
+                    <ul>
+                        <li>Increased work stress</li>
+                        <li>Lack of quality sleep</li>
+                        <li>Reduced physical activity</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 15px;">Suggested Solutions</h3>
+                    <ol>
+                        <li>Practice stress-reduction techniques like deep breathing for 5 minutes when you feel overwhelmed</li>
+                        <li>Establish a consistent sleep schedule aiming for 7-9 hours nightly</li>
+                        <li>Incorporate short walks into your daily routine, even 10 minutes can help</li>
+                        <li>Consider keeping a mood journal to identify specific triggers</li>
+                    </ol>
+                    
+                    <div style="margin-top: 20px;">
+                        <h4>Recommended Resources</h4>
+                        <a href="#" style="color: var(--primary); display: block; margin-bottom: 5px;">• Stress Management Workbook</a>
+                        <a href="#" style="color: var(--primary); display: block; margin-bottom: 5px;">• Sleep Hygiene Guide</a>
+                        <a href="#" style="color: var(--primary); display: block;">• 10-Minute Office Yoga Routine</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <header>
+    
+    <footer>
         <div class="container">
-            <div class="logo">
-                <img src="images/groot-icon.png" alt="Groot Logo">
-                <h1>Groot</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#journal">Journal</a></li>
-                    <li><a href="#therapists">Therapists</a></li>
-                    <li><a href="#trackers">Trackers</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#community">Community</a></li>
-                </ul>
-            </nav>
-            <div class="auth-btns">
-                <button id="loginBtn">Login</button>
-                <button id="signupBtn" class="primary">Sign Up</button>
+            <p>© 2023 Groot Mental Health Wellness Platform. All rights reserved.</p>
+            <div style="margin-top: 15px;">
+                <a href="#" style="color: white; margin: 0 10px;">Privacy Policy</a>
+                <a href="#" style="color: white; margin: 0 10px;">Terms of Service</a>
+                <a href="#" style="color: white; margin: 0 10px;">Contact Us</a>
             </div>
         </div>
-    </header>
-<!-- 📘 Journal Icon with Popup -->
-<div id="journal-icon">
-  <div id="journal-popup" class="hidden">
-    <p>Quick Journal Tip: Stay consistent! Small reflections each day go a long way. 🌱</p>
-  </div>
-  <img src="images/journal-icon.png" alt="Journal Icon" />
-</div>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-text">
-                    <h2>Nurture Your Mental Wellbeing</h2>
-                    <p>Groot helps you grow through journaling, tracking, and connecting with professional support.</p>
-                    <button class="primary">Start Your Journey</button>
-                </div>
-                <div class="hero-image">
-                    <img src="images/leaves-bg.jpg" alt="Peaceful nature scene">
-                </div>
-            </div>
-        </section>
-
-        <!-- Other sections would go here -->
-    </main>
-
-    <script src="js/app.js"></script>
+    </footer>
+    
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('.nav-link, .feature-card').forEach(item => {
+            item.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                
+                // Hide all content sections
+                document.querySelectorAll('.main-content').forEach(content => {
+                    content.classList.remove('active-content');
+                });
+                
+                // Show the selected content section
+                document.getElementById(`${target}-content`).classList.add('active-content');
+            });
+        });
+        
+        // Login modal (simplified)
+        document.querySelector('.login-btn').addEventListener('click', function() {
+            const email = prompt('Enter your email:');
+            const password = prompt('Enter your password:');
+            
+            if (email && password) {
+                alert('Login successful!');
+            }
+        });
+        
+        // Signup modal (simplified)
+        document.querySelector('.signup-btn').addEventListener('click', function() {
+            const email = prompt('Enter your email:');
+            const password = prompt('Create a password:');
+            
+            if (email && password) {
+                alert('Account created! Welcome to Groot.');
+            }
+        });
+        
+        // Problem solver functionality
+        document.querySelector('.problem-solver button').addEventListener('click', function() {
+            const textarea = document.querySelector('.problem-solver textarea');
+            if (textarea.value.trim() !== '') {
+                document.querySelector('.solution-card').style.display = 'block';
+            } else {
+                alert('Please describe what you\'re struggling with.');
+            }
+        });
+        
+        // Sample chart data (would be replaced with real data in implementation)
+        if (typeof Chart !== 'undefined') {
+            // Mood chart
+            const moodCtx = document.getElementById('moodChart').getContext('2d');
+            new Chart(moodCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Mood (1-10)',
+                        data: [6, 7, 5, 8, 7, 9, 8],
+                        borderColor: '#4a7c59',
+                        tension: 0.1
+                    }]
+                }
+            });
+            
+            // Sleep chart
+            const sleepCtx = document.getElementById('sleepChart').getContext('2d');
+            new Chart(sleepCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Hours Slept',
+                        data: [7, 6.5, 7.5, 6, 8, 9, 8.5],
+                        backgroundColor: '#4a7c59'
+                    }]
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
-<section id="journal" class="journal-section">
-    <div class="container">
-        <h2>Daily Journal</h2>
-        <div class="streak-counter">
-            <span class="streak-number">0</span>
-            <span class="streak-label">day streak</span>
-        </div>
-        <div class="journal-entry">
-            <div class="mood-selector">
-                <h3>How are you feeling today?</h3>
-                <div class="mood-options">
-                    <button class="mood-option" data-mood="1">😢</button>
-                    <button class="mood-option" data-mood="2">😞</button>
-                    <button class="mood-option" data-mood="3">😐</button>
-                    <button class="mood-option" data-mood="4">😊</button>
-                    <button class="mood-option" data-mood="5">😁</button>
-                </div>
-            </div>
-            <textarea placeholder="Write about your day..."></textarea>
-            <button class="primary save-entry">Save Entry</button>
-        </div>
-        <div class="previous-entries">
-            <h3>Previous Entries</h3>
-            <div class="entries-list">
-                <!-- Entries will be added here dynamically -->
-            </div>
-        </div>
-    </div>
-</section>
-<section id="therapists" class="therapists-section">
-    <div class="container">
-        <h2>Find Local Therapists</h2>
-        <div class="search-filters">
-            <div class="filter">
-                <label for="specialty">Specialty</label>
-                <select id="specialty">
-                    <option value="">Any</option>
-                    <option value="anxiety">Anxiety</option>
-                    <option value="depression">Depression</option>
-                    <option value="trauma">Trauma</option>
-                    <option value="relationships">Relationships</option>
-                </select>
-            </div>
-            <div class="filter">
-                <label for="insurance">Insurance</label>
-                <select id="insurance">
-                    <option value="">Any</option>
-                    <option value="aetna">Aetna</option>
-                    <option value="bluecross">Blue Cross</option>
-                    <option value="medicare">Medicare</option>
-                </select>
-            </div>
-            <button class="primary search-btn">Search</button>
-        </div>
-        <div class="therapists-list">
-            <!-- Therapists will be loaded here -->
-        </div>
-    </div>
-</section>
-<section id="trackers" class="trackers-section">
-    <div class="container">
-        <h2>Health Trackers</h2>
-        <div class="tracker-grid">
-            <div class="tracker-card sleep-tracker">
-                <h3>Sleep</h3>
-                <div class="tracker-data">
-                    <span class="tracker-value">7.5</span>
-                    <span class="tracker-unit">hours</span>
-                </div>
-                <button class="tracker-btn">Log Sleep</button>
-            </div>
-            <div class="tracker-card activity-tracker">
-                <h3>Activity</h3>
-                <div class="tracker-data">
-                    <span class="tracker-value">45</span>
-                    <span class="tracker-unit">minutes</span>
-                </div>
-                <button class="tracker-btn">Log Activity</button>
-            </div>
-            <div class="tracker-card mood-tracker
