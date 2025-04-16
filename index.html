@@ -337,3 +337,83 @@ form button {
     <script src="js/app.js"></script>
 </body>
 </html>
+<section id="journal" class="journal-section">
+    <div class="container">
+        <h2>Daily Journal</h2>
+        <div class="streak-counter">
+            <span class="streak-number">0</span>
+            <span class="streak-label">day streak</span>
+        </div>
+        <div class="journal-entry">
+            <div class="mood-selector">
+                <h3>How are you feeling today?</h3>
+                <div class="mood-options">
+                    <button class="mood-option" data-mood="1">😢</button>
+                    <button class="mood-option" data-mood="2">😞</button>
+                    <button class="mood-option" data-mood="3">😐</button>
+                    <button class="mood-option" data-mood="4">😊</button>
+                    <button class="mood-option" data-mood="5">😁</button>
+                </div>
+            </div>
+            <textarea placeholder="Write about your day..."></textarea>
+            <button class="primary save-entry">Save Entry</button>
+        </div>
+        <div class="previous-entries">
+            <h3>Previous Entries</h3>
+            <div class="entries-list">
+                <!-- Entries will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="therapists" class="therapists-section">
+    <div class="container">
+        <h2>Find Local Therapists</h2>
+        <div class="search-filters">
+            <div class="filter">
+                <label for="specialty">Specialty</label>
+                <select id="specialty">
+                    <option value="">Any</option>
+                    <option value="anxiety">Anxiety</option>
+                    <option value="depression">Depression</option>
+                    <option value="trauma">Trauma</option>
+                    <option value="relationships">Relationships</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="insurance">Insurance</label>
+                <select id="insurance">
+                    <option value="">Any</option>
+                    <option value="aetna">Aetna</option>
+                    <option value="bluecross">Blue Cross</option>
+                    <option value="medicare">Medicare</option>
+                </select>
+            </div>
+            <button class="primary search-btn">Search</button>
+        </div>
+        <div class="therapists-list">
+            <!-- Therapists will be loaded here -->
+        </div>
+    </div>
+</section>
+<section id="trackers" class="trackers-section">
+    <div class="container">
+        <h2>Health Trackers</h2>
+        <div class="tracker-grid">
+            <div class="tracker-card sleep-tracker">
+                <h3>Sleep</h3>
+                <div class="tracker-data">
+                    <span class="tracker-value">7.5</span>
+                    <span class="tracker-unit">hours</span>
+                </div>
+                <button class="tracker-btn">Log Sleep</button>
+            </div>
+            <div class="tracker-card activity-tracker">
+                <h3>Activity</h3>
+                <div class="tracker-data">
+                    <span class="tracker-value">45</span>
+                    <span class="tracker-unit">minutes</span>
+                </div>
+                <button class="tracker-btn">Log Activity</button>
+            </div>
+            <div class="tracker-card mood-tracker
