@@ -39,6 +39,10 @@
     .header-buttons button:hover {
       background-color: #777;
     }
+    
+    .link-button:hover {
+      background-color: #0056b3;
+    }
 
         main {
             padding: 20px;
@@ -59,17 +63,19 @@
 <body>
 
     <header>
-        <h1>grroot</h1>
+         <div class="header-title">grroot</div>
+    <div class="header-buttons">
+      <button onclick="alert('Home clicked')">advice</button>
+      <button onclick="alert('About clicked')">vent</button>
+      <button onclick="alert('Contact clicked')">idkabc</button>
+      <button class="link-button" onclick="window.location.href='https://www.wikipedia.org'">wiki</button>
+
+    </div>
     </header>
 
     <main>
         
-        <h2> <div class="header-title">My Website</div>
-    <div class="header-buttons">
-      <button onclick="alert('Home clicked')">Home</button>
-      <button onclick="alert('About clicked')">About</button>
-      <button onclick="alert('Contact clicked')">Contact</button>
-    </div></h2>
+        <h2></h2>
         <p>This is a simple static website. You can edit this file to add more content!</p>
         <p>Enjoy browsing!</p>
     </main>
